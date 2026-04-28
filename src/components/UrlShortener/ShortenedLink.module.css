@@ -1,0 +1,97 @@
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.original {
+  font-size: var(--font-size-body);
+  color: var(--color-gray-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.shortened {
+  font-size: var(--font-size-body);
+  color: var(--color-cyan);
+  white-space: nowrap;
+}
+
+.shortened:hover {
+  text-decoration: underline;
+}
+
+.copyBtn {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  background-color: var(--color-cyan);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-sm);
+  min-width: 6.5rem;
+  transition: background-color 0.2s;
+}
+
+.copyBtn:hover {
+  background-color: var(--color-cyan-light);
+}
+
+.copied {
+  background-color: var(--color-purple-dark);
+}
+
+.copied:hover {
+  background-color: var(--color-purple-dark);
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    gap: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .original {
+    max-width: none;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-gray-100);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    align-items: stretch;
+  }
+
+  .shortened {
+    text-align: left;
+  }
+
+  .copyBtn {
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    min-width: auto;
+  }
+}

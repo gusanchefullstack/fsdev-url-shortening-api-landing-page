@@ -1,0 +1,77 @@
+.section {
+  background-color: var(--color-gray-100);
+  padding-block: 5rem 8rem;
+  padding-inline: var(--page-padding);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+
+.heading {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: var(--font-size-body);
+  color: var(--color-gray-500);
+  max-width: 44ch;
+  margin-inline: auto;
+  line-height: 1.8;
+}
+
+/* ── Cards grid with connector line ─────────── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+  position: relative;
+}
+
+/* Horizontal connector line between cards */
+.cards::before {
+  content: '';
+  position: absolute;
+  top: 2.75rem;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  height: 0.5rem;
+  background-color: var(--color-cyan);
+  z-index: 0;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .section {
+    padding-block: 4rem 6rem;
+  }
+
+  .header {
+    margin-bottom: 4.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 5.5rem;
+  }
+
+  /* Vertical connector line on mobile */
+  .cards::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: 0.5rem;
+    height: auto;
+    transform: translateX(-50%);
+  }
+}

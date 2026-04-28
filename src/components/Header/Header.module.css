@@ -1,0 +1,172 @@
+.header {
+  position: relative;
+  background-color: var(--color-white);
+  padding-block: 2rem;
+  padding-inline: var(--page-padding);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+/* ── Desktop nav ─────────────────────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.875rem;
+}
+
+.navLink {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-500);
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--color-gray-900);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loginLink {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-500);
+  transition: color 0.2s;
+}
+
+.loginLink:hover {
+  color: var(--color-gray-900);
+}
+
+.signupBtn {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  background-color: var(--color-cyan);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-full);
+  transition: background-color 0.2s;
+}
+
+.signupBtn:hover {
+  background-color: var(--color-cyan-light);
+}
+
+/* ── Hamburger (mobile only) ─────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.3125rem;
+  margin-left: auto;
+  padding: 0.25rem;
+}
+
+.hamburgerBar {
+  display: block;
+  width: 1.5rem;
+  height: 0.1875rem;
+  background-color: var(--color-gray-500);
+  border-radius: 2px;
+}
+
+/* ── Mobile menu ─────────────────────────────── */
+.mobileMenu {
+  position: absolute;
+  top: calc(100% - 0.5rem);
+  left: var(--page-padding);
+  right: var(--page-padding);
+  background-color: var(--color-purple-dark);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  z-index: 100;
+  text-align: center;
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobileNavLink {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  transition: color 0.2s;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-cyan);
+}
+
+.mobileDivider {
+  border: none;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.mobileNavActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.mobileLoginLink {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  transition: color 0.2s;
+}
+
+.mobileLoginLink:hover {
+  color: var(--color-cyan);
+}
+
+.mobileSignupBtn {
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  background-color: var(--color-cyan);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  transition: background-color 0.2s;
+}
+
+.mobileSignupBtn:hover {
+  background-color: var(--color-cyan-light);
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
