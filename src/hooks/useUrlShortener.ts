@@ -13,7 +13,7 @@ export function useUrlShortener() {
     setLoading(true)
     try {
       const params = new URLSearchParams({ url })
-      const response = await fetch('/api/shorten', {
+      const response = await fetch('/api/v1/shorten', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params.toString(),
