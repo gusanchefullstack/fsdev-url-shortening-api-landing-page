@@ -17,7 +17,7 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className={styles.nav} aria-label="Primary navigation">
-          <ul className={styles.navLinks} role="list">
+          <ul className={styles.navLinks}>
             <li><a href="#features" className={styles.navLink}>Features</a></li>
             <li><a href="#pricing" className={styles.navLink}>Pricing</a></li>
             <li><a href="#resources" className={styles.navLink}>Resources</a></li>
@@ -30,6 +30,7 @@ export function Header() {
 
         {/* Hamburger button (mobile only) */}
         <button
+          type="button"
           className={styles.hamburger}
           aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={menuOpen}
@@ -42,23 +43,27 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className={styles.mobileMenu} id="mobile-menu" role="dialog" aria-modal="true">
-          <nav aria-label="Mobile navigation">
-            <ul className={styles.mobileNavLinks} role="list">
-              <li><a href="#features" className={styles.mobileNavLink} onClick={closeMenu}>Features</a></li>
-              <li><a href="#pricing" className={styles.mobileNavLink} onClick={closeMenu}>Pricing</a></li>
-              <li><a href="#resources" className={styles.mobileNavLink} onClick={closeMenu}>Resources</a></li>
-            </ul>
-            <hr className={styles.mobileDivider} />
-            <div className={styles.mobileNavActions}>
-              <a href="#login" className={styles.mobileLoginLink} onClick={closeMenu}>Login</a>
-              <a href="#signup" className={styles.mobileSignupBtn} onClick={closeMenu}>Sign Up</a>
-            </div>
-          </nav>
-        </div>
-      )}
+      {/* Mobile menu — always in DOM so aria-controls target is always resolvable */}
+      <div
+        className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!menuOpen}
+      >
+        <nav aria-label="Mobile navigation">
+          <ul className={styles.mobileNavLinks}>
+            <li><a href="#features" className={styles.mobileNavLink} onClick={closeMenu}>Features</a></li>
+            <li><a href="#pricing" className={styles.mobileNavLink} onClick={closeMenu}>Pricing</a></li>
+            <li><a href="#resources" className={styles.mobileNavLink} onClick={closeMenu}>Resources</a></li>
+          </ul>
+          <hr className={styles.mobileDivider} />
+          <div className={styles.mobileNavActions}>
+            <a href="#login" className={styles.mobileLoginLink} onClick={closeMenu}>Login</a>
+            <a href="#signup" className={styles.mobileSignupBtn} onClick={closeMenu}>Sign Up</a>
+          </div>
+        </nav>
+      </div>
     </header>
   )
 }

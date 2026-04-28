@@ -59,13 +59,13 @@
 }
 
 .illustrationImg {
-  width: min(115%, 700px);
+  width: min(115%, 43.75rem);
   max-width: none;
   transform: translateX(5%);
 }
 
 /* ── Responsive ──────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .hero {
     padding-block: 1.5rem 5rem;
   }

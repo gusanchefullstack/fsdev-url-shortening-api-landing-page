@@ -48,8 +48,9 @@
   border-color: var(--color-cyan);
 }
 
-.inputError {
-  border-color: var(--color-red) !important;
+.input.inputError,
+.input.inputError:focus {
+  border-color: var(--color-red);
   color: var(--color-red);
 }
 
@@ -76,13 +77,13 @@
   transition: background-color 0.2s;
 }
 
-.submitBtn:hover:not(:disabled) {
-  background-color: var(--color-cyan-light);
-}
-
 .submitBtn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--color-cyan-light);
 }
 
 /* ── Results list ────────────────────────────── */
@@ -96,7 +97,7 @@
 }
 
 /* ── Responsive ──────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .formWrapper {
     background-image: url('/images/bg-shorten-mobile.svg');
     background-position: top right;

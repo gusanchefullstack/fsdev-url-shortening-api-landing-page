@@ -34,7 +34,7 @@
 }
 
 /* ── Responsive ──────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .section {
     background-image: url('/images/bg-boost-mobile.svg');
     background-position: top right;
