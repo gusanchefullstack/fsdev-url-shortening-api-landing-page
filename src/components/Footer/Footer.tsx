@@ -26,7 +26,7 @@ export function Footer() {
           {Object.entries(footerLinks).map(([section, items]) => (
             <div key={section} className={styles.linkGroup}>
               <h3 className={styles.groupHeading}>{section}</h3>
-              <ul role="list">
+              <ul>
                 {items.map((item) => (
                   <li key={item}>
                     <a

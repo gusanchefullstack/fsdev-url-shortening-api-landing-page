@@ -14,6 +14,7 @@
 - Implement the project using HTML/CSS and Reactjs 19 with Typescript if needed.
 - Use vite as deploying server for frontend
 - The source code should be in src/ folder under the project root. CSS styles and Typescript files should inside corresponding subfolders. Use logical reactjs components created in a /componentes folder
+- **Static assets (images, SVGs, fonts) MUST be placed inside the `public/` folder** (e.g. `public/images/`). Never put them at the project root `images/` directory. Vite only copies `public/` into the production build — files outside `public/` are not served in production even though Vite's dev server may serve them. All URL references like `/images/foo.svg` in components resolve to `public/images/foo.svg`.
 - Use vitest for testing use case and componentes key for properly operation of app.
 - Use best practices for frontend development naming convention, semantic html among others.
 - Use best practices for frontend react applications
