@@ -26,3 +26,4 @@ figma-design/
 *.njsproj
 *.sln
 *.sw?
+.vercel
