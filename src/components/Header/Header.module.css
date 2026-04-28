@@ -91,6 +91,7 @@
 
 /* ── Mobile menu ─────────────────────────────── */
 .mobileMenu {
+  display: none;
   position: absolute;
   top: calc(100% - 0.5rem);
   left: var(--page-padding);
@@ -100,6 +101,10 @@
   padding: 2rem;
   z-index: 100;
   text-align: center;
+}
+
+.mobileMenuOpen {
+  display: block;
 }
 
 .mobileNavLinks {
@@ -161,7 +166,7 @@
 }
 
 /* ── Responsive ──────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .nav {
     display: none;
   }

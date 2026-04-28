@@ -40,18 +40,18 @@ export function StatisticsSection() {
           </p>
         </header>
 
-        <div className={styles.cards} role="list">
+        <ul className={styles.cards}>
           {features.map((f) => (
-            <div key={f.id} role="listitem">
+            <li key={f.id}>
               <FeatureCard
                 icon={f.icon}
                 title={f.title}
                 description={f.description}
                 offset={f.offset}
               />
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

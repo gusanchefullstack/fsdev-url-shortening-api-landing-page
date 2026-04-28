@@ -70,7 +70,7 @@
 }
 
 /* ── Responsive ──────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .footer {
     padding-block: 3.5rem;
   }
