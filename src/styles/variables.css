@@ -1,0 +1,45 @@
+:root {
+  /* Colors — Primary */
+  --color-cyan:         hsl(180, 66%, 49%);
+  --color-cyan-light:   hsl(180, 57%, 65%);
+  --color-purple-dark:  hsl(257, 27%, 26%);
+
+  /* Colors — Secondary */
+  --color-red:          hsl(0, 87%, 67%);
+
+  /* Colors — Neutral */
+  --color-gray-400:     hsl(0, 0%, 75%);
+  --color-gray-500:     hsl(257, 7%, 63%);
+  --color-gray-900:     hsl(255, 11%, 22%);
+  --color-gray-950:     hsl(260, 8%, 14%);
+  --color-gray-100:     hsl(225, 33%, 96%);
+  --color-white:        hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-family:        'Poppins', sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-bold:   700;
+  --font-size-body:     1.125rem; /* 18px */
+  --font-size-sm:       0.9375rem; /* 15px */
+  --font-size-xs:       0.875rem; /* 14px */
+
+  /* Spacing */
+  --spacing-xs:   0.5rem;
+  --spacing-sm:   1rem;
+  --spacing-md:   1.5rem;
+  --spacing-lg:   2rem;
+  --spacing-xl:   3rem;
+  --spacing-2xl:  5rem;
+
+  /* Border radius */
+  --radius-sm:    0.3125rem;
+  --radius-md:    0.625rem;
+  --radius-full:  9999px;
+
+  /* Shadows */
+  --shadow-card:  0 0 1.5rem hsla(257, 27%, 26%, 0.1);
+
+  /* Layout */
+  --max-width:    1110px;
+  --page-padding: 1.5rem;
+}
